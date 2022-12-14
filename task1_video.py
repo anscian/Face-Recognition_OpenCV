@@ -8,6 +8,8 @@ status, img = cap.read()
 while status:
 	#gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 	#faces = face_cascade.detectMultiScale(img, 1.1, 10)
+
+	print((status, img))
 	
 	faces = face_cascade.detectMultiScale(img, 1.1, 10)
 	
