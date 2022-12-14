@@ -6,10 +6,12 @@ cap = cv.VideoCapture(0)
 
 while 1:
 	_, img = cap.read()
-	gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 	
-	faces = face_cascade.detectMultiScale(gray, 1.1, 1)
+	#gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
+	#faces = face_cascade.detectMultiScale(gray, 1.1, 5)
 	
+	faces = face_cascade.detectMultiScale(img, 1.1, 5)
+		
 	for (x, y, w, h) in faces:
 		cv.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
 		
