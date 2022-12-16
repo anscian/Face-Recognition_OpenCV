@@ -11,7 +11,7 @@ while status:
 
 	print((status, img))
 	
-	faces = face_cascade.detectMultiScale(img, 1.1, 10)
+	faces = face_cascade.detectMultiScale(img, 1.4, 10) # increased scale factor to have normal fps for the result video
 	
 	for (x, y, w, h) in faces:
 		cv.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
